@@ -2,7 +2,7 @@
 
 # 📊 Automated Bots
 
-[![Daily Signals](https://github.com/USER/automated-bots/actions/workflows/daily_run.yml/badge.svg)](https://github.com/USER/automated-bots/actions/workflows/daily_run.yml)
+[![Daily Signals](https://github.com/Atharv279/automated-bots/actions/workflows/daily_run.yml/badge.svg)](https://github.com/Atharv279/automated-bots/actions/workflows/daily_run.yml)
 ![Python](https://img.shields.io/badge/Python-3.11+-3776ab?logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Automated](https://img.shields.io/badge/Runs-Daily%20via%20CI-blue)
