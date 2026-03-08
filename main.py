@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Automated Bots — Algorithmic market signal generation with visual analytics."""
-import json, os, random, math, datetime, hashlib, glob
+import json
+import os
+import random
+import datetime
+import hashlib
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -14,9 +18,9 @@ def generate_ohlcv(ticker, base_price=None):
     v = random.uniform(0.01, 0.08)
     o = base_price * (1 + random.gauss(0, v))
     h = o * (1 + abs(random.gauss(0, v)))
-    l = o * (1 - abs(random.gauss(0, v)))
-    c = random.uniform(l, h)
-    return {"ticker": ticker, "open": round(o,2), "high": round(h,2), "low": round(l,2), "close": round(c,2), "volume": int(random.uniform(1e5,1e8))}
+    low = o * (1 - abs(random.gauss(0, v)))
+    c = random.uniform(low, h)
+    return {"ticker": ticker, "open": round(o,2), "high": round(h,2), "low": round(low,2), "close": round(c,2), "volume": int(random.uniform(1e5,1e8))}
 
 def compute_indicators(candles):
     closes = [c["close"] for c in candles]
@@ -36,17 +40,23 @@ def generate_signal(indicators):
     score = 0
     reasons = []
     if indicators["sma_5"] > indicators["sma_20"]:
-        score += 1; reasons.append("SMA5 > SMA20 (bullish)")
+        score += 1
+        reasons.append("SMA5 > SMA20 (bullish)")
     else:
-        score -= 1; reasons.append("SMA5 < SMA20 (bearish)")
+        score -= 1
+        reasons.append("SMA5 < SMA20 (bearish)")
     if indicators["rsi"] < 30:
-        score += 2; reasons.append(f"RSI oversold ({indicators['rsi']})")
+        score += 2
+        reasons.append(f"RSI oversold ({indicators['rsi']})")
     elif indicators["rsi"] > 70:
-        score -= 2; reasons.append(f"RSI overbought ({indicators['rsi']})")
+        score -= 2
+        reasons.append(f"RSI overbought ({indicators['rsi']})")
     if indicators["momentum"] > 0.02:
-        score += 1; reasons.append(f"+momentum ({indicators['momentum']})")
+        score += 1
+        reasons.append(f"+momentum ({indicators['momentum']})")
     elif indicators["momentum"] < -0.02:
-        score -= 1; reasons.append(f"-momentum ({indicators['momentum']})")
+        score -= 1
+        reasons.append(f"-momentum ({indicators['momentum']})")
     signals = {2: "STRONG_BUY", 1: "BUY", 0: "HOLD", -1: "SELL"}
     signal = signals.get(score, "STRONG_BUY" if score > 2 else "STRONG_SELL")
     return {"signal": signal, "score": score, "reasons": reasons, "confidence": round(min(abs(score)/4, 1.0), 2)}
@@ -83,7 +93,7 @@ def generate_charts(all_signals, date_str):
         signal_counts[sig] = signal_counts.get(sig, 0) + 1
     labels = list(signal_counts.keys())
     values = list(signal_counts.values())
-    colors = [SIGNAL_COLORS.get(l, "#95a5a6") for l in labels]
+    colors = [SIGNAL_COLORS.get(lbl, "#95a5a6") for lbl in labels]
     axes[0][0].pie(values, labels=labels, autopct="%1.0f%%", colors=colors, startangle=90)
     axes[0][0].set_title("Signal Distribution")
 
@@ -172,7 +182,7 @@ def main():
 
     with open(f"logs/{date_str}.md", "w") as f:
         f.write("\n".join(md))
-    print(f"[automated-bots] v2.0 report + charts generated")
+    print("[automated-bots] v2.0 report + charts generated")
 
 if __name__ == "__main__":
     main()
