@@ -1,204 +1,209 @@
 {
-  "timestamp": "2026-06-04T07:03:33.191136+00:00",
-  "run_id": "7627591447",
+  "timestamp": "2026-06-04T11:28:29.706251+00:00",
+  "run_id": "786cc6b19c",
   "market_summary": {
     "tickers_scanned": 10,
-    "buy_signals": 5,
+    "buy_signals": 2,
     "sell_signals": 3,
-    "hold_signals": 2
+    "hold_signals": 5
   },
   "signals": [
     {
-      "ticker": "AMZN",
-      "latest_price": 1994.93,
+      "ticker": "AAPL",
+      "latest_price": 2305.43,
       "indicators": {
-        "sma_5": 1878.9,
-        "sma_20": 1871.69,
-        "rsi": 46.48,
-        "volatility": 0.069531,
-        "momentum": 0.0553
+        "sma_5": 2229.93,
+        "sma_20": 2198.65,
+        "rsi": 45.56,
+        "volatility": 0.068782,
+        "momentum": 0.0221
       },
       "signal": {
         "signal": "STRONG_BUY",
         "score": 2,
         "reasons": [
           "SMA5 > SMA20 (bullish)",
-          "+momentum (0.0553)"
+          "+momentum (0.0221)"
         ],
         "confidence": 0.5
       }
     },
     {
-      "ticker": "GOOG",
-      "latest_price": 3887.76,
+      "ticker": "TSLA",
+      "latest_price": 1599.19,
       "indicators": {
-        "sma_5": 3813.51,
-        "sma_20": 3742.36,
-        "rsi": 58.32,
-        "volatility": 0.10765,
-        "momentum": 0.0868
+        "sma_5": 1604.68,
+        "sma_20": 1578.79,
+        "rsi": 53.64,
+        "volatility": 0.091748,
+        "momentum": 0.11
       },
       "signal": {
         "signal": "STRONG_BUY",
         "score": 2,
         "reasons": [
           "SMA5 > SMA20 (bullish)",
-          "+momentum (0.0868)"
+          "+momentum (0.11)"
         ],
         "confidence": 0.5
       }
     },
     {
       "ticker": "BTC",
-      "latest_price": 1530.8,
+      "latest_price": 2083.86,
       "indicators": {
-        "sma_5": 1552.67,
-        "sma_20": 1546.88,
-        "rsi": 50.12,
-        "volatility": 0.098463,
-        "momentum": -0.0068
-      },
-      "signal": {
-        "signal": "BUY",
-        "score": 1,
-        "reasons": [
-          "SMA5 > SMA20 (bullish)"
-        ],
-        "confidence": 0.25
-      }
-    },
-    {
-      "ticker": "NVDA",
-      "latest_price": 313.73,
-      "indicators": {
-        "sma_5": 304.47,
-        "sma_20": 297.07,
-        "rsi": 54.34,
-        "volatility": 0.079094,
-        "momentum": -0.014
-      },
-      "signal": {
-        "signal": "BUY",
-        "score": 1,
-        "reasons": [
-          "SMA5 > SMA20 (bullish)"
-        ],
-        "confidence": 0.25
-      }
-    },
-    {
-      "ticker": "META",
-      "latest_price": 2157.68,
-      "indicators": {
-        "sma_5": 2155.3,
-        "sma_20": 2135.24,
-        "rsi": 48.86,
-        "volatility": 0.078676,
-        "momentum": -0.0193
-      },
-      "signal": {
-        "signal": "BUY",
-        "score": 1,
-        "reasons": [
-          "SMA5 > SMA20 (bullish)"
-        ],
-        "confidence": 0.25
-      }
-    },
-    {
-      "ticker": "SOL",
-      "latest_price": 1601.16,
-      "indicators": {
-        "sma_5": 1711.81,
-        "sma_20": 1679.98,
-        "rsi": 48.99,
-        "volatility": 0.089225,
-        "momentum": -0.039
+        "sma_5": 1960.84,
+        "sma_20": 2004.89,
+        "rsi": 52.33,
+        "volatility": 0.09338,
+        "momentum": 0.0471
       },
       "signal": {
         "signal": "HOLD",
         "score": 0,
         "reasons": [
-          "SMA5 > SMA20 (bullish)",
-          "-momentum (-0.039)"
+          "SMA5 < SMA20 (bearish)",
+          "+momentum (0.0471)"
         ],
         "confidence": 0.0
       }
     },
     {
-      "ticker": "AAPL",
-      "latest_price": 656.22,
+      "ticker": "SOL",
+      "latest_price": 1061.98,
       "indicators": {
-        "sma_5": 683.84,
-        "sma_20": 680.9,
-        "rsi": 62.7,
-        "volatility": 0.109061,
-        "momentum": -0.1115
+        "sma_5": 917.04,
+        "sma_20": 946.49,
+        "rsi": 60.78,
+        "volatility": 0.073528,
+        "momentum": 0.1346
+      },
+      "signal": {
+        "signal": "HOLD",
+        "score": 0,
+        "reasons": [
+          "SMA5 < SMA20 (bearish)",
+          "+momentum (0.1346)"
+        ],
+        "confidence": 0.0
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "latest_price": 2273.0,
+      "indicators": {
+        "sma_5": 2326.19,
+        "sma_20": 2316.09,
+        "rsi": 51.24,
+        "volatility": 0.067297,
+        "momentum": -0.0682
       },
       "signal": {
         "signal": "HOLD",
         "score": 0,
         "reasons": [
           "SMA5 > SMA20 (bullish)",
-          "-momentum (-0.1115)"
+          "-momentum (-0.0682)"
+        ],
+        "confidence": 0.0
+      }
+    },
+    {
+      "ticker": "AMZN",
+      "latest_price": 3941.76,
+      "indicators": {
+        "sma_5": 4040.13,
+        "sma_20": 4079.28,
+        "rsi": 41.3,
+        "volatility": 0.087092,
+        "momentum": 0.0432
+      },
+      "signal": {
+        "signal": "HOLD",
+        "score": 0,
+        "reasons": [
+          "SMA5 < SMA20 (bearish)",
+          "+momentum (0.0432)"
+        ],
+        "confidence": 0.0
+      }
+    },
+    {
+      "ticker": "GOOG",
+      "latest_price": 2118.45,
+      "indicators": {
+        "sma_5": 2409.45,
+        "sma_20": 2382.14,
+        "rsi": 58.67,
+        "volatility": 0.13013,
+        "momentum": -0.1143
+      },
+      "signal": {
+        "signal": "HOLD",
+        "score": 0,
+        "reasons": [
+          "SMA5 > SMA20 (bullish)",
+          "-momentum (-0.1143)"
         ],
         "confidence": 0.0
       }
     },
     {
       "ticker": "ETH",
-      "latest_price": 3105.3,
+      "latest_price": 606.53,
       "indicators": {
-        "sma_5": 3054.62,
-        "sma_20": 3059.36,
-        "rsi": 54.54,
-        "volatility": 0.043207,
-        "momentum": 0.0104
-      },
-      "signal": {
-        "signal": "SELL",
-        "score": -1,
-        "reasons": [
-          "SMA5 < SMA20 (bearish)"
-        ],
-        "confidence": 0.25
-      }
-    },
-    {
-      "ticker": "MSFT",
-      "latest_price": 2225.78,
-      "indicators": {
-        "sma_5": 2225.91,
-        "sma_20": 2262.65,
-        "rsi": 62.33,
-        "volatility": 0.137697,
-        "momentum": -0.0044
-      },
-      "signal": {
-        "signal": "SELL",
-        "score": -1,
-        "reasons": [
-          "SMA5 < SMA20 (bearish)"
-        ],
-        "confidence": 0.25
-      }
-    },
-    {
-      "ticker": "TSLA",
-      "latest_price": 1272.23,
-      "indicators": {
-        "sma_5": 1202.6,
-        "sma_20": 1268.22,
-        "rsi": 48.47,
-        "volatility": 0.092947,
-        "momentum": -0.0527
+        "sma_5": 586.42,
+        "sma_20": 619.47,
+        "rsi": 56.38,
+        "volatility": 0.129948,
+        "momentum": -0.0291
       },
       "signal": {
         "signal": "STRONG_SELL",
         "score": -2,
         "reasons": [
           "SMA5 < SMA20 (bearish)",
-          "-momentum (-0.0527)"
+          "-momentum (-0.0291)"
+        ],
+        "confidence": 0.5
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "latest_price": 684.78,
+      "indicators": {
+        "sma_5": 655.96,
+        "sma_20": 688.84,
+        "rsi": 54.24,
+        "volatility": 0.104285,
+        "momentum": -0.0479
+      },
+      "signal": {
+        "signal": "STRONG_SELL",
+        "score": -2,
+        "reasons": [
+          "SMA5 < SMA20 (bearish)",
+          "-momentum (-0.0479)"
+        ],
+        "confidence": 0.5
+      }
+    },
+    {
+      "ticker": "META",
+      "latest_price": 1879.26,
+      "indicators": {
+        "sma_5": 1882.19,
+        "sma_20": 1926.85,
+        "rsi": 63.85,
+        "volatility": 0.081762,
+        "momentum": -0.0468
+      },
+      "signal": {
+        "signal": "STRONG_SELL",
+        "score": -2,
+        "reasons": [
+          "SMA5 < SMA20 (bearish)",
+          "-momentum (-0.0468)"
         ],
         "confidence": 0.5
       }
@@ -207,64 +212,64 @@
   "delta": {
     "status": "compared",
     "deltas": {
-      "AMZN": {
+      "AAPL": {
         "today_signal": "STRONG_BUY",
-        "yesterday_signal": "BUY",
-        "price_change_pct": -44.94,
+        "yesterday_signal": "STRONG_SELL",
+        "price_change_pct": -43.92,
         "signal_changed": true
       },
-      "GOOG": {
+      "TSLA": {
         "today_signal": "STRONG_BUY",
-        "yesterday_signal": "HOLD",
-        "price_change_pct": 139.8,
-        "signal_changed": true
+        "yesterday_signal": "STRONG_BUY",
+        "price_change_pct": 82.18,
+        "signal_changed": false
       },
       "BTC": {
-        "today_signal": "BUY",
+        "today_signal": "HOLD",
         "yesterday_signal": "STRONG_BUY",
-        "price_change_pct": -53.54,
-        "signal_changed": true
-      },
-      "NVDA": {
-        "today_signal": "BUY",
-        "yesterday_signal": "STRONG_BUY",
-        "price_change_pct": -83.56,
-        "signal_changed": true
-      },
-      "META": {
-        "today_signal": "BUY",
-        "yesterday_signal": "HOLD",
-        "price_change_pct": -32.6,
+        "price_change_pct": -36.76,
         "signal_changed": true
       },
       "SOL": {
         "today_signal": "HOLD",
         "yesterday_signal": "STRONG_BUY",
-        "price_change_pct": -34.39,
+        "price_change_pct": -56.48,
         "signal_changed": true
-      },
-      "AAPL": {
-        "today_signal": "HOLD",
-        "yesterday_signal": "STRONG_SELL",
-        "price_change_pct": -84.04,
-        "signal_changed": true
-      },
-      "ETH": {
-        "today_signal": "SELL",
-        "yesterday_signal": "SELL",
-        "price_change_pct": 44.89,
-        "signal_changed": false
       },
       "MSFT": {
-        "today_signal": "SELL",
+        "today_signal": "HOLD",
         "yesterday_signal": "HOLD",
-        "price_change_pct": -2.73,
+        "price_change_pct": -0.66,
+        "signal_changed": false
+      },
+      "AMZN": {
+        "today_signal": "HOLD",
+        "yesterday_signal": "BUY",
+        "price_change_pct": 8.79,
         "signal_changed": true
       },
-      "TSLA": {
+      "GOOG": {
+        "today_signal": "HOLD",
+        "yesterday_signal": "HOLD",
+        "price_change_pct": 30.67,
+        "signal_changed": false
+      },
+      "ETH": {
+        "today_signal": "STRONG_SELL",
+        "yesterday_signal": "SELL",
+        "price_change_pct": -71.7,
+        "signal_changed": true
+      },
+      "NVDA": {
         "today_signal": "STRONG_SELL",
         "yesterday_signal": "STRONG_BUY",
-        "price_change_pct": 44.93,
+        "price_change_pct": -64.12,
+        "signal_changed": true
+      },
+      "META": {
+        "today_signal": "STRONG_SELL",
+        "yesterday_signal": "HOLD",
+        "price_change_pct": -41.3,
         "signal_changed": true
       }
     }
